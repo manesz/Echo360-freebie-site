@@ -1,0 +1,59 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^freebie\.co\.th$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.freebie\.co\.th$
+RewriteRule ^l\/worldcup2014$ "http\:\/\/goo\.gl\/b9A5Mz" [R=302,L]
+
+
+RewriteOptions inherit
+
+RewriteCond %{HTTP_HOST} ^www\.freebie\.co\.th$
+RewriteRule ^r\/Tipco$ "http\:\/\/goo\.gl\/ULKca5" [R=302,L]
+
+RewriteCond %{HTTP_HOST} ^freebie\.co\.th$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.freebie\.co\.th$
+RewriteRule ^r\/AIS$ "http\:\/\/goo\.gl\/ocL99B" [R=302,L]
+
+RewriteCond %{HTTP_HOST} ^freebie\.co\.th$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.freebie\.co\.th$
+RewriteRule ^r\/JeleClub$ "http\:\/\/goo\.gl\/UpeXFI" [R=302,L]
+
+# BEGIN Better WP Security
+<files .htaccess>
+Order allow,deny
+Deny from all
+</files>
+
+<files readme.html>
+Order allow,deny
+Deny from all
+</files>
+
+<files readme.txt>
+Order allow,deny
+Deny from all
+</files>
+
+<files install.php>
+Order allow,deny
+Deny from all
+</files>
+
+<files wp-config.php>
+Order allow,deny
+Deny from all
+</files>
+
+# END Better WP Security
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+

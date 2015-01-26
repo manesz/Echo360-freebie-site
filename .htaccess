@@ -1,0 +1,16 @@
+
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+Redirect 303 /game-status http://27.100.45.152:8085/signin.php
+Redirect 302 /g http://27.100.45.152:8085/signin.php
+Redirect 301 /a http://27.100.45.152:8085/signin.php
